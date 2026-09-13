@@ -76,7 +76,7 @@ op_release="etc/flippy-openwrt-release"
 ophub_release_file="etc/ophub-release"
 
 # Dependency files download repository
-depends_repo="https://github.com/ophub/amlogic-s9xxx-armbian"
+depends_repo="https://github.com/icnbing/amlogic-s9xxx-armbian"
 # U-BOOT files download repository
 uboot_repo="https://github.com/ophub/u-boot"
 # Firmware files download repository
@@ -85,12 +85,12 @@ firmware_repo="https://github.com/ophub/firmware"
 script_repo="https://github.com/ophub/luci-app-amlogic"
 
 # Set the kernel download repository
-kernel_repo="https://github.com/ophub/kernel"
+kernel_repo="https://github.com/icnbing/kernel"
 # Set the kernel tags (kernel_xxx) that can be overridden via the [ -u ] parameter
 default_tags="stable"
 kernel_usage=""
 # Set the list of kernels used by default(Selectable version)
-stable_kernel=("6.12.y" "6.18.y")
+stable_kernel=("6.6.y" "6.12.y" "6.18.y")
 flippy_kernel=(${stable_kernel[@]})
 beta_kernel=(${stable_kernel[@]})
 rk3588_kernel=("6.1.y")
@@ -1352,6 +1352,7 @@ loop_make() {
 
 # Show welcome message
 echo -e "${STEPS} Welcome to the OpenWrt Image Builder!"
+process_msg "This of [icnbing/opwrt] remake"
 echo -e "${INFO} Build server environment: [ Release: ${host_release} / Host: ${arch_info} ] \n"
 # Check script permission
 [[ "$(id -u)" == 0 ]] || error_msg "please run this script as root: [ sudo ./${0} ]"
@@ -1369,8 +1370,9 @@ download_depends
 download_kernel
 
 # Show make settings
+process_msg "This of [icnbing/opwrt] remake"
 echo -e "${INFO} [ ${#make_openwrt[@]} ] target board(s) to build: [ $(echo ${make_openwrt[@]} | xargs) ]"
-echo -e "${INFO} Kernel Repo: [ ${kernel_repo} ], Kernel Usage: [ ${kernel_usage} ] \n"
+echo -e "${INFO} [icnbing/opwrt] Kernel Repo: [ ${kernel_repo} ], Kernel Usage: [ ${kernel_usage} ] \n"
 # Show server start information
 echo -e "${INFO} Server disk usage before build: \n$(df -hT ${make_path}) \n"
 
