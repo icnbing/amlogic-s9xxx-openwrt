@@ -85,7 +85,7 @@ firmware_repo="https://github.com/ophub/firmware"
 script_repo="https://github.com/ophub/luci-app-amlogic"
 
 # Set the kernel download repository
-kernel_repo="https://github.com/icnbing/amlogic-s9xxx-openwrt"
+kernel_repo="https://github.com/icnbing/kernel"
 # Set the kernel tags (kernel_xxx) that can be overridden via the [ -u ] parameter
 default_tags="stable"
 kernel_usage=""
