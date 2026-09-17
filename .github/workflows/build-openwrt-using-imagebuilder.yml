@@ -36,7 +36,7 @@ on:
         default: "6.6.156"
         type: choice
         options:
-          - 6.6.156
+          - 6.6.157
           - 6.18.52
            - 5.10.y
           - 5.15.y
@@ -78,12 +78,12 @@ on:
       builder_name:
         description: "Set OpenWrt builder signature."
         required: false
-        default: "icnbing"
+        default: "icnb"
         type: choice
         options:
           - ophub
           - angel
-          - icnbing
+          - icnb
 
 env:
   TZ: Etc/UTC
