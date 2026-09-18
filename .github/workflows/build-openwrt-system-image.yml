@@ -88,12 +88,12 @@ on:
       builder_name:
         description: "Set OpenWrt builder signature."
         required: false
-        default: "icnbing"
+        default: "icnb"
         type: choice
         options:
           - ophub
           - angel
-          - icnbing
+          - icnb
 
 env:
   TZ: Etc/UTC
