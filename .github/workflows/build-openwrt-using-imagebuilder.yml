@@ -62,6 +62,7 @@ on:
         options:
           - ophub/kernel
           - icnbing/kernel
+          - icnbing/amlogic-s9xxx-openwrt
       kernel_usage:
         description: "Set the tags of the stable kernel."
         required: false
