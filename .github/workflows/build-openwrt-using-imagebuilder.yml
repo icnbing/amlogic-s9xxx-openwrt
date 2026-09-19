@@ -33,12 +33,12 @@ on:
       openwrt_kernel:
         description: "Select kernel version"
         required: false
-        default: "6.6.156"
+        default: "6.6.157"
         type: choice
         options:
           - 6.6.157
           - 6.18.52
-           - 5.10.y
+          - 5.10.y
           - 5.15.y
           - 6.1.y
           - 6.6.y
@@ -57,7 +57,7 @@ on:
       kernel_repo:
         description: "Set the kernel repository"
         required: false
-        default: "icnbing/kernel"
+        default: "icnbing/amlogic-s9xxx-openwrt"
         type: choice
         options:
           - ophub/kernel
