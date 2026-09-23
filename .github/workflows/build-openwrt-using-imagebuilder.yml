@@ -56,7 +56,7 @@ on:
       kernel_repo:
         description: "Set the kernel repository"
         required: false
-        default: "icnbing/amlogic-s9xxx-openwrt"
+        default: "icnbing/kernel"
         type: choice
         options:
           - ophub/kernel
