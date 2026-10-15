@@ -19,6 +19,7 @@ on:
           - openwrt_main
           - lede_master
           - immortalwrt_master
+          - immortalwrt:25.12.02
       openwrt_board:
         description: "Select device board"
         required: false
